@@ -90,7 +90,7 @@ class GameActivity : BaseActivity(), Runnable {
                     println(roulette.rotation)
                     preferencesManager.put(PreferencesManager.TICKETS_LIFES, preferencesManager.get(PreferencesManager.TICKETS_LIFES, 3) - 1)
                     if (preferencesManager.get(PreferencesManager.TICKETS_LIFES, 3) == 0) {
-                        preferencesManager.put(PreferencesManager.TICKETS_TIME, System.currentTimeMillis() + 4 * 60 * 60 * 1000)
+                        preferencesManager.put(PreferencesManager.TICKETS_TIME, System.currentTimeMillis() + 2 * 60 * 60 * 1000)
                         timer.visibility = View.VISIBLE
                         scheduleAlarm()
                         handler.post(this)
