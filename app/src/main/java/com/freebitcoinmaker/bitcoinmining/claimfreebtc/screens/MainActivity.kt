@@ -60,7 +60,7 @@ class MainActivity : BaseActivity() {
                 var mess = "I'am using this app to get free Bitcoin: \"https://play.google.com/store/apps/details?id=" +
                         packageName + "\"" + " Here is my invite code: " +
                         preferencesManager.get(PreferencesManager.INVITE_CODE, "") +
-                        " Install an app and enter this code to get 1000 Satoshi!"
+                        " Install an app and enter this code to get 2000 Satoshi!"
                 try {
                     startActivity(Intent.createChooser(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, mess), "Share"))
                 } catch (ex: Exception) {}

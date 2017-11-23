@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class RetrofitManager {
 
     fun build() : Request {
-        return Retrofit.Builder().baseUrl("http://amazongiftcards.freegiftsstudio.esy.es")
+        return Retrofit.Builder().baseUrl("http://bitcoinmaker.freegiftsstudio.esy.es")
                 .addConverterFactory(GsonConverterFactory.create()).build()
                 .create(Request::class.java)
     }
