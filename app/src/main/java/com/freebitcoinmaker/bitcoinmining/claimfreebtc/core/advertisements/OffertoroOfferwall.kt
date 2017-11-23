@@ -23,8 +23,8 @@ class OffertoroOfferwall(private var preferencesManager: PreferencesManager) {
     fun init(activity: Activity) {
 
         OTOfferWallSettings.getInstance().configInit(
-                "4099",
-                "d1d69498eccedf05a886f75bb34bf464",
+                "4121",
+                "700ba0fe95d7d1fa0b7e1ee607fa6164",
                 AppTools.uniqueId(activity))
         OffersInit.getInstance().create(activity)
 

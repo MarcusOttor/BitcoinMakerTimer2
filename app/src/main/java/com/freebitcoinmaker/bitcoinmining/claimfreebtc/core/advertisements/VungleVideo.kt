@@ -22,7 +22,7 @@ class VungleVideo {
     }
 
     fun init(activity: Activity) {
-        vungle.init(activity, "5a145efd93d318b46c008dd3")
+        vungle.init(activity, "5a172dd5d824f5a97400b488")
 
         vungle.setEventListeners(object : EventListener {
             override fun onAdEnd(b: Boolean, b1: Boolean) {

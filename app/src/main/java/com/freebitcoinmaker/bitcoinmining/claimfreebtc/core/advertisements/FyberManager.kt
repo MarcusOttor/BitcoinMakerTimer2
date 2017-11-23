@@ -81,7 +81,7 @@ class FyberManager(
     }
 
     companion object {
-        val appId = "110472"
-        val SecurityToken = "9407d63fb22b5df5e2c6a55fcaf43c70"
+        val appId = "110556"
+        val SecurityToken = "7792e3e3d533768dadea3b66d31e5705"
     }
 }

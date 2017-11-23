@@ -23,7 +23,7 @@ class AdcolonyVideo {
     }
 
     fun init(activity: Activity) {
-        AdColony.configure(activity, "app4b5df67dec9745a7a4", "vza86d66642f5e4c1fb6")
+        AdColony.configure(activity, "app11e9e4378f884ba88f", "vz29f05ef9abf649e4b9")
         AdColony.setRewardListener { adColonyReward ->
             if (!prefernceManager.get(PreferencesManager.ADDITIONAL_LIFE, false)) {
                 coinManager.addCoins(adColonyReward.rewardAmount)
@@ -51,7 +51,7 @@ class AdcolonyVideo {
 
     fun onResume(activity: Activity) {
         if (adcolonyVideo == null || adcolonyVideo!!.isExpired) {
-            AdColony.requestInterstitial("vza86d66642f5e4c1fb6",
+            AdColony.requestInterstitial("vz29f05ef9abf649e4b9",
                     object : AdColonyInterstitialListener() {
                 override fun onRequestFilled(ad: AdColonyInterstitial) {
                     adcolonyVideo = ad
@@ -63,7 +63,7 @@ class AdcolonyVideo {
 
                 override fun onExpiring(ad: AdColonyInterstitial?) {
                     super.onExpiring(ad)
-                    AdColony.requestInterstitial("vza86d66642f5e4c1fb6", this)
+                    AdColony.requestInterstitial("vz29f05ef9abf649e4b9", this)
                 }
             })
         }

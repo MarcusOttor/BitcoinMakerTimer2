@@ -14,7 +14,7 @@ class UnityVideo(private var preferencesManager: PreferencesManager,
     private lateinit var coinsText: TextView
 
     fun init(activity: Activity) {
-        UnityAds.initialize(activity, "1614480", this)
+        UnityAds.initialize(activity, "1616716", this)
     }
 
     override fun onUnityAdsStart(p0: String?) {
