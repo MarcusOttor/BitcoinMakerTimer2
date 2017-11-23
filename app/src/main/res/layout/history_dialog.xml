@@ -4,10 +4,10 @@
     android:layout_height="300dp"
     android:minHeight="300dp"
     android:maxHeight="300dp"
-    android:layout_width="210dp"
-    android:minWidth="210dp"
+    android:layout_width="260dp"
+    android:minWidth="260dp"
     android:background="@drawable/dialog_back_dark"
-    android:maxWidth="210dp">
+    android:maxWidth="260dp">
 
     <TextView
         fontPath="fonts/ProximaNovaBold.otf"
@@ -48,7 +48,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="36dp"
         android:id="@+id/recycler"
-        android:layout_width="210dp"
+        android:layout_width="260dp"
         android:layout_height="match_parent">
     </android.support.v7.widget.RecyclerView>
 

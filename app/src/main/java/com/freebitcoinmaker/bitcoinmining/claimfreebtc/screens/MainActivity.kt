@@ -42,7 +42,8 @@ class MainActivity : BaseActivity() {
         finish()
     }
 
-    @OnClick(R.id.claim, R.id.offers, R.id.logOut, R.id.share, R.id.rateUs, R.id.ticketcsGame, R.id.history)
+    @OnClick(R.id.claim, R.id.offers, R.id.logOut, R.id.share,
+            R.id.rateUs, R.id.ticketcsGame, R.id.history, R.id.redeem)
     fun controlMain(view: View) {
         when (view.id) {
             R.id.claim -> {
@@ -94,6 +95,11 @@ class MainActivity : BaseActivity() {
             }
             R.id.history -> {
                 dialogsManager.showHistoryDialog(supportFragmentManager)
+            }
+            R.id.redeem -> {
+                startActivity(Intent(this, RedeemActivity::class.java)
+                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP))
+                finish()
             }
         }
     }

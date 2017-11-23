@@ -14,6 +14,7 @@ import android.widget.TextView
 import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
+import com.freebitcoinmaker.bitcoinmining.claimfreebtc.AppTools
 import com.freebitcoinmaker.bitcoinmining.claimfreebtc.R
 import com.freebitcoinmaker.bitcoinmining.claimfreebtc.core.MyApplication
 import com.freebitcoinmaker.bitcoinmining.claimfreebtc.db.History
@@ -78,7 +79,7 @@ class HistoryDialog : DialogFragment() {
         override fun onBindViewHolder(holder: HistoryPayViewHolder?, position: Int) {
             holder?.itemView?.apply {
                 paymentNumber.text = "${position + 1}"
-                paymentAmount.text = "$${(data[position].amount)}"
+                paymentAmount.text = "${AppTools.format(data[position].amount / 100_000_000f)} BTC"
                 paymentDate.text = data[position].date
             }
         }

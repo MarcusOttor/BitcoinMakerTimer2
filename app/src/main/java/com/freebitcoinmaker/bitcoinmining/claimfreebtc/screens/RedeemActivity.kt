@@ -58,11 +58,11 @@ class RedeemActivity : BaseActivity() {
                     thread {
                         Thread.sleep(3000)
                         runOnUiThread {
+                            database.historyDao().insert(History(
+                                    SimpleDateFormat("dd.MM.yyyy").format(System.currentTimeMillis()), coinsManager.getCoins()))
                             coinsManager.subtractCoins(coinsManager.getCoins())
                             updateCoins()
                             updateRedeemTexts()
-                            database.historyDao().insert(History(
-                                    SimpleDateFormat("dd.MM.yyyy").format(System.currentTimeMillis()), coinsManager.getCoins()))
                             dismisser.dismiss()
                             dialogsManager.showAlertDialog(supportFragmentManager,
                                     "You will receive your Satoshi in 3 - 7 days!", {
