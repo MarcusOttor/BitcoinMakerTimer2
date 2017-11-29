@@ -1,12 +1,12 @@
 package com.freebitcoinmaker.bitcoinmining.claimfreebtc.core
 
 import android.app.AlarmManager
-import android.app.Application
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.support.multidex.MultiDex
+import android.support.multidex.MultiDexApplication
 import com.freebitcoinmaker.bitcoinmining.claimfreebtc.core.advertisements.AdvertisementManager
 import com.freebitcoinmaker.bitcoinmining.claimfreebtc.core.managers.CoinsManager
 import com.freebitcoinmaker.bitcoinmining.claimfreebtc.core.managers.PreferencesManager
@@ -20,7 +20,7 @@ import com.yandex.metrica.YandexMetricaConfig
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig
 import javax.inject.Inject
 
-class MyApplication : Application() {
+class MyApplication : MultiDexApplication() {
 
     @Inject lateinit var calligraphy: CalligraphyConfig
     @Inject lateinit var coinsManager: CoinsManager
