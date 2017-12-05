@@ -38,7 +38,7 @@ class ClaimActivity: BaseActivity(), Runnable {
         finish()
     }
 
-    @OnClick(R.id.claim)
+    @OnClick(R.id.claim, R.id.moreCoins)
     fun claim(view: View) {
         when (view.id) {
             R.id.claim -> {
@@ -63,6 +63,13 @@ class ClaimActivity: BaseActivity(), Runnable {
                             "Not available now!", {
                     })
                 }
+            }
+            R.id.moreCoins -> {
+                startActivity(Intent(this,
+                        OffersActivity::class.java)
+                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or
+                                Intent.FLAG_ACTIVITY_CLEAR_TOP))
+                finish()
             }
         }
     }
